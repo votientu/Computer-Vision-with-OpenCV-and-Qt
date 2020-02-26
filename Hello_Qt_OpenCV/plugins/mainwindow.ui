@@ -28,7 +28,7 @@
        <widget class="QLineEdit" name="inputImgEdit"/>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QPushButton" name="inputImgButton">
         <property name="text">
          <string>Browse</string>
         </property>
@@ -39,21 +39,21 @@
     <item row="1" column="0">
      <layout class="QVBoxLayout" name="centerLayout">
       <item>
-       <widget class="QLabel" name="label_2">
+       <widget class="QLabel" name="filterLabel">
         <property name="text">
          <string>Filter Plugins</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QListWidget" name="listWidget"/>
+       <widget class="QListWidget" name="filtersList"/>
       </item>
      </layout>
     </item>
     <item row="2" column="0">
      <layout class="QHBoxLayout" name="bottomLayout">
       <item>
-       <widget class="QPushButton" name="pushButton_2">
+       <widget class="QPushButton" name="helpButton">
         <property name="text">
          <string>Help</string>
         </property>
@@ -73,7 +73,7 @@
        </spacer>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_3">
+       <widget class="QPushButton" name="filterButton">
         <property name="text">
          <string>Filter</string>
         </property>

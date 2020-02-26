@@ -29,7 +29,8 @@ SOURCES += \
         mainwindow.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    cvplugininterface.h
 
 FORMS += \
         mainwindow.ui
@@ -38,3 +39,16 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+win32: {
+    include("c:/dev/opencv/opencv.pri")
+}
+unix: !macx {
+    CONFIG += link_pkgconfig
+    PKGCONFIG += opencv
+}
+unix: macx {
+    INCLUDEPATH += "/usr/local/include"
+    LIBS += -L"/usr/local/lib" \
+            -lopencv_world
+}
