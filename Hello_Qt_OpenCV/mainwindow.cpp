@@ -7,6 +7,12 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     loadSettings();
+    turkishTranslator = new QTranslator(this);
+    turkishTranslator->load(":/translations/translation_tr.qm");
+    germanTranslator = new QTranslator(this);
+    germanTranslator->load(":/translations/translation_de.qm");
+    frenchTranslator = new QTranslator(this);
+    frenchTranslator->load(":/translations/translation_fr.qm");
 }
 
 MainWindow::~MainWindow()
@@ -60,6 +66,15 @@ void MainWindow::closeEvent(QCloseEvent *event)
         event->ignore();
 }
 
+void MainWindow::changeEvent(QEvent *event)
+{
+    if (event->type() == QEvent::LanguageChange)
+        ui->retranslateUi(this);
+
+    else
+        QMainWindow::changeEvent(event);
+}
+
 void MainWindow::loadSettings()
 {
     QSettings settings("Packt",
@@ -92,4 +107,26 @@ void MainWindow::saveSettings()
                       ui->gaussianBlurRadioButton->isChecked());
     settings.setValue("displayImageCheckBox",
                       ui->displayImageCheckBox->isChecked());
+}
+
+void MainWindow::on_actionTurkish_triggered()
+{
+    qApp->installTranslator(turkishTranslator);
+}
+
+void MainWindow::on_actionGerman_triggered()
+{
+    qApp->installTranslator(germanTranslator);
+}
+
+void MainWindow::on_actionFrench_triggered()
+{
+    qApp->installTranslator(frenchTranslator);
+}
+
+void MainWindow::on_actionEnglish_triggered()
+{
+    qApp->removeTranslator(turkishTranslator);
+    qApp->removeTranslator(germanTranslator);
+    qApp->removeTranslator(frenchTranslator);
 }

@@ -47,3 +47,8 @@ unix: macx {
     LIBS += -L"/usr/local/lib" \
             -lopencv_world
 }
+
+RESOURCES += \
+    resources.qrc
+
+TRANSLATIONS = translation_de.ts translation_tr.ts translation_fr.ts
