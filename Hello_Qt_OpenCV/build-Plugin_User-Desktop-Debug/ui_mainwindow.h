@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.5
+** Created by: Qt User Interface Compiler version 5.12.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -10,12 +10,9 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
-#include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHBoxLayout>
-#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QListWidget>
@@ -47,29 +44,29 @@ public:
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
-            MainWindow->setObjectName(QStringLiteral("MainWindow"));
+            MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->resize(501, 300);
         centralWidget = new QWidget(MainWindow);
-        centralWidget->setObjectName(QStringLiteral("centralWidget"));
+        centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         gridLayout = new QGridLayout(centralWidget);
         gridLayout->setSpacing(6);
         gridLayout->setContentsMargins(11, 11, 11, 11);
-        gridLayout->setObjectName(QStringLiteral("gridLayout"));
+        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         topLayout = new QHBoxLayout();
         topLayout->setSpacing(6);
-        topLayout->setObjectName(QStringLiteral("topLayout"));
+        topLayout->setObjectName(QString::fromUtf8("topLayout"));
         inputImglabel = new QLabel(centralWidget);
-        inputImglabel->setObjectName(QStringLiteral("inputImglabel"));
+        inputImglabel->setObjectName(QString::fromUtf8("inputImglabel"));
 
         topLayout->addWidget(inputImglabel);
 
         inputImgEdit = new QLineEdit(centralWidget);
-        inputImgEdit->setObjectName(QStringLiteral("inputImgEdit"));
+        inputImgEdit->setObjectName(QString::fromUtf8("inputImgEdit"));
 
         topLayout->addWidget(inputImgEdit);
 
         inputImgButton = new QPushButton(centralWidget);
-        inputImgButton->setObjectName(QStringLiteral("inputImgButton"));
+        inputImgButton->setObjectName(QString::fromUtf8("inputImgButton"));
 
         topLayout->addWidget(inputImgButton);
 
@@ -78,14 +75,14 @@ public:
 
         centerLayout = new QVBoxLayout();
         centerLayout->setSpacing(6);
-        centerLayout->setObjectName(QStringLiteral("centerLayout"));
+        centerLayout->setObjectName(QString::fromUtf8("centerLayout"));
         filterLabel = new QLabel(centralWidget);
-        filterLabel->setObjectName(QStringLiteral("filterLabel"));
+        filterLabel->setObjectName(QString::fromUtf8("filterLabel"));
 
         centerLayout->addWidget(filterLabel);
 
         filtersList = new QListWidget(centralWidget);
-        filtersList->setObjectName(QStringLiteral("filtersList"));
+        filtersList->setObjectName(QString::fromUtf8("filtersList"));
 
         centerLayout->addWidget(filtersList);
 
@@ -94,9 +91,9 @@ public:
 
         bottomLayout = new QHBoxLayout();
         bottomLayout->setSpacing(6);
-        bottomLayout->setObjectName(QStringLiteral("bottomLayout"));
+        bottomLayout->setObjectName(QString::fromUtf8("bottomLayout"));
         helpButton = new QPushButton(centralWidget);
-        helpButton->setObjectName(QStringLiteral("helpButton"));
+        helpButton->setObjectName(QString::fromUtf8("helpButton"));
 
         bottomLayout->addWidget(helpButton);
 
@@ -105,7 +102,7 @@ public:
         bottomLayout->addItem(horizontalSpacer);
 
         filterButton = new QPushButton(centralWidget);
-        filterButton->setObjectName(QStringLiteral("filterButton"));
+        filterButton->setObjectName(QString::fromUtf8("filterButton"));
 
         bottomLayout->addWidget(filterButton);
 
@@ -121,12 +118,12 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", Q_NULLPTR));
-        inputImglabel->setText(QApplication::translate("MainWindow", "Input Image", Q_NULLPTR));
-        inputImgButton->setText(QApplication::translate("MainWindow", "Browse", Q_NULLPTR));
-        filterLabel->setText(QApplication::translate("MainWindow", "Filter Plugins", Q_NULLPTR));
-        helpButton->setText(QApplication::translate("MainWindow", "Help", Q_NULLPTR));
-        filterButton->setText(QApplication::translate("MainWindow", "Filter", Q_NULLPTR));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
+        inputImglabel->setText(QApplication::translate("MainWindow", "Input Image", nullptr));
+        inputImgButton->setText(QApplication::translate("MainWindow", "Browse", nullptr));
+        filterLabel->setText(QApplication::translate("MainWindow", "Filter Plugins", nullptr));
+        helpButton->setText(QApplication::translate("MainWindow", "Help", nullptr));
+        filterButton->setText(QApplication::translate("MainWindow", "Filter", nullptr));
     } // retranslateUi
 
 };
