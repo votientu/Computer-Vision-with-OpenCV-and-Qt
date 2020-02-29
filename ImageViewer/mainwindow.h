@@ -2,6 +2,12 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QPixmap>
+#include <QDropEvent>
+#include <QMimeData>
+#include <QFileInfo>
+#include <QMessageBox>
+#include <QResizeEvent>
 
 namespace Ui {
 class MainWindow;
@@ -15,8 +21,14 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+protected:
+    void dragEnterEvent(QDragEnterEvent *event);
+    void dropEvent(QDropEvent *event);
+    void resizeEvent(QResizeEvent *event);
+
 private:
     Ui::MainWindow *ui;
+    QPixmap pixmap;
 };
 
 #endif // MAINWINDOW_H
