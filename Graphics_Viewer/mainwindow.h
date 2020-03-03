@@ -2,14 +2,15 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QDropEvent>
-#include <QFileInfo>
-#include <QMimeData>
-#include <QResizeEvent>
-#include <QMessageBox>
+
 #include <QGraphicsScene>
-#include <QPushButton>
-#include <QGraphicsProxyWidget>
+#include <QGraphicsItem>
+#include <QPixmap>
+#include <QDragEnterEvent>
+#include <QDropEvent>
+#include <QMimeData>
+#include <QFileInfo>
+#include <QMessageBox>
 #include <QDebug>
 
 #include "qcustomgraphicseffect.h"
@@ -23,18 +24,17 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit MainWindow(QWidget *parent = nullptr);
+    explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
 protected:
-    void dropEvent(QDropEvent * event);
     void dragEnterEvent(QDragEnterEvent *event);
-    void resizeEvent(QResizeEvent *event);
+    void dropEvent(QDropEvent *event);
 
 private:
     Ui::MainWindow *ui;
-
     QGraphicsScene scene;
+
 };
 
 #endif // MAINWINDOW_H

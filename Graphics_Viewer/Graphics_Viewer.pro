@@ -27,11 +27,13 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-        qcustomgraphicseffect.cpp
+        qcustomgraphicseffect.cpp \
+    qenhancedgraphicsview.cpp
 
 HEADERS += \
         mainwindow.h \
-        qcustomgraphicseffect.h
+        qcustomgraphicseffect.h \
+    qenhancedgraphicsview.h
 
 FORMS += \
         mainwindow.ui
