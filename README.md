@@ -2,4 +2,4 @@
 Computer Vision with OpenCV and Qt projects
 Code in C++
 
-find -iname '*_plugin.so' -exec cp {} mainapp/cvplugins/ \;
+find ~/build/computer_vision/ -iname '*_plugin.so' -exec cp {} ~/build/computer_vision/mainapp/cvplugins/ \;
